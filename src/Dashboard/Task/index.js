@@ -9,7 +9,7 @@ const ENUM_VALUE = {
 };
 
 const Task = ({ data, users }) => {
-  const { assignment, body, created, owner, title, value, _id } = data;
+  const { assignment, body, created, owner, title, value } = data;
   const dateCreated = new Date(created).toLocaleDateString("ru-RU");
 
   const assignmentPics = assignment.map((id) => {
@@ -32,8 +32,8 @@ const Task = ({ data, users }) => {
         </div>
         <div className="Task__assignment">
           {assignmentPics.map((url) => (
-            <div className="Task__assignmentPic">
-              <img src={url} width="24" height="24" />
+            <div key={url} className="Task__assignmentPic">
+              <img src={url} width="24" height="24" alt="avatar" />
             </div>
           ))}
         </div>
@@ -44,7 +44,6 @@ const Task = ({ data, users }) => {
 
 Task.propTypes = {
   data: PropTypes.shape({
-    _id: PropTypes.string,
     assignment: PropTypes.array,
     body: PropTypes.string,
     created: PropTypes.string,
