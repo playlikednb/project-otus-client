@@ -31,9 +31,9 @@ const Task = ({ data, users }) => {
           <div className="Task__date">{dateCreated}</div>
         </div>
         <div className="Task__assignment">
-          {assignmentPics.map((url) => (
-            <div key={url} className="Task__assignmentPic">
-              <img src={url} width="24" height="24" alt="avatar" />
+          {assignmentPics.map((url, i) => (
+            <div key={url + i} className="Task__assignmentPic">
+              {url && <img src={url} width="24" height="24" alt="avatar" />}
             </div>
           ))}
         </div>
