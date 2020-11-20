@@ -1,0 +1,77 @@
+.Task {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  height: 140px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 8px;
+  font-size: 12px;
+  padding: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: box-shadow .2s ease, background-color .15s ease;
+  will-change: box-shadow;
+}
+
+.Task:hover {
+  box-shadow: 0 0 6px 3px rgba(0,0,0,.15);
+}
+
+.Task_LOW {
+  background-color: #eee;
+}
+.Task_NORMAL {
+  background-color: #f9fbc4;
+  border-color: #8e906c;
+}
+.Task_HIGH {
+  background-color: #ffd2dd;
+  border-color: #94787f;
+}
+.Task_CRITICAL {
+  background-color: #e63461;
+  border-color: #76001e;
+}
+
+.Task__id {
+  text-align: right;
+  font-size: 8px;
+  color: #ccc;
+  margin-bottom: 4px;
+}
+.Task__title {
+  margin: 0;
+  font-size: 14px;
+}
+.Task__textShort {
+  white-space: nowrap;
+  overflow: hidden;
+  color: #444;
+  text-overflow: ellipsis;
+  margin-top: 8px;
+}
+.Task__owner {
+}
+.Task__footerInfo {
+  margin-right: auto;
+}
+.Task__footer {
+  display: flex;
+  align-items: flex-end;
+  margin-top: auto;
+}
+.Task__date {
+}
+.Task__assignment {
+  display: flex;
+}
+.Task__assignmentPic {
+  width: 24px;
+  height: 24px;
+  background-image: url("./images/user.svg");
+  background-size: contain;
+  border-radius: 50%;
+  margin-left: 4px;
+  overflow: hidden;
+}
