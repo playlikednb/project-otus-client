@@ -19,7 +19,6 @@ const Task = ({ data, users }) => {
 
   const ownerData = users.find(({ _id }) => _id === owner);
 
-  console.log(ownerData);
   return (
     <div className={`Task Task_${ENUM_VALUE[value]}`}>
       <h3 className="Task__title">{title}</h3>
@@ -32,14 +31,11 @@ const Task = ({ data, users }) => {
           <div className="Task__date">{dateCreated}</div>
         </div>
         <div className="Task__assignment">
-          {assignmentPics.map(
-            (url) =>
-              console.log(url) || (
-                <div className="Task__assignmentPic">
-                  <img src={url} width="24" height="24" />
-                </div>
-              )
-          )}
+          {assignmentPics.map((url) => (
+            <div className="Task__assignmentPic">
+              <img src={url} width="24" height="24" />
+            </div>
+          ))}
         </div>
       </div>
     </div>

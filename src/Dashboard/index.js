@@ -93,7 +93,6 @@ class Dashboad extends React.Component {
   }
 
   addTask(newTask) {
-    console.log('addTask', newTask);
     this.setState({
       tasks: {
         list: [...this.state.tasks.list, newTask],
